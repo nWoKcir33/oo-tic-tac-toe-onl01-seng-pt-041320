@@ -63,8 +63,8 @@ end
 end
  
  
-  def current_player
-    turn_count % 2 == 0 ? "X" : "O"
+def current_player
+  turn_count.even? ? "X" : "O"
 end
   
   def full?
