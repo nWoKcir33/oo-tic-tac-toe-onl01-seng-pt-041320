@@ -63,9 +63,12 @@ end
 end
  
  
-def current_player
-  turn_count.even? ? "X" : "O"
-end
+ def current_player
+    if turn_count % 2 == 0
+    "X"
+    else
+    "O"
+  end
   
   def full?
   @board.all?{|occupied| occupied != " "}
